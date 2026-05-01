@@ -1,110 +1,91 @@
 const orange = '#FF8200';
 const black = '#000000';
 const white = '#FFFFFF';
-const warmGray = '#F5F2ED';
+const gray = '#F7F4EF';
 
 export const metadata = {
   title: 'Kori Pickle | LinkedIn Banner',
-  description: 'LinkedIn banner asset for Kori Pickle using white, black, and Vols Orange brand identity.',
+  description: 'Full-size LinkedIn banner for Kori Pickle using white, black, and Vols Orange brand identity.',
 };
+
+function Crown() {
+  return (
+    <svg width="92" height="62" viewBox="0 0 92 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M13 52H79" stroke={orange} strokeWidth="7" strokeLinecap="round" />
+      <path d="M17 48L24 18L39 37L46 10L53 37L68 18L75 48H17Z" fill={orange} />
+      <circle cx="24" cy="15" r="6" fill={orange} />
+      <circle cx="46" cy="8" r="6" fill={orange} />
+      <circle cx="68" cy="15" r="6" fill={orange} />
+    </svg>
+  );
+}
 
 export default function BannerPage() {
   return (
     <main
       style={{
-        minHeight: '100vh',
-        background: warmGray,
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        padding: 24,
+        margin: 0,
+        padding: 0,
+        width: '100vw',
+        height: '100vh',
+        minHeight: 396,
+        background: white,
+        overflow: 'hidden',
         fontFamily: 'Arial, Helvetica, sans-serif',
       }}
     >
       <section
         style={{
-          width: 1584,
-          height: 396,
+          width: '100vw',
+          height: '100vh',
+          minHeight: 396,
           background: white,
           color: black,
           position: 'relative',
           overflow: 'hidden',
-          borderTop: `6px solid ${orange}`,
-          borderBottom: `6px solid ${orange}`,
-          boxShadow: '0 20px 60px rgba(0,0,0,0.10)',
         }}
       >
-        <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(circle at 82% 50%, rgba(255,130,0,0.10), transparent 34%)' }} />
+        <div style={{ position: 'absolute', inset: 0, background: `linear-gradient(90deg, ${white} 0%, ${white} 58%, ${gray} 100%)` }} />
+        <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 10, background: orange }} />
+        <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: 10, background: orange }} />
 
-        <div style={{ position: 'absolute', top: 28, left: 84, right: 84, height: 2, background: orange }} />
-        <div
-          style={{
-            position: 'absolute',
-            top: 7,
-            left: '50%',
-            transform: 'translateX(-50%)',
-            background: white,
-            padding: '0 28px',
-            color: orange,
-            fontSize: 42,
-            fontWeight: 900,
-            lineHeight: 1,
-          }}
-        >
-          ♛
+        <div style={{ position: 'absolute', top: 34, left: 88, right: 88, height: 3, background: orange }} />
+        <div style={{ position: 'absolute', top: 5, left: '50%', transform: 'translateX(-50%)', background: white, padding: '0 34px' }}>
+          <Crown />
         </div>
 
-        <div
-          style={{
-            position: 'absolute',
-            left: 54,
-            bottom: 30,
-            width: 330,
-            height: 170,
-            border: `2px solid rgba(255,130,0,0.20)`,
-            borderRadius: 28,
-            background: 'rgba(255,130,0,0.035)',
-          }}
-        />
-        <div style={{ position: 'absolute', left: 88, bottom: 56, color: orange, fontSize: 17, fontWeight: 900, letterSpacing: '0.22em', textTransform: 'uppercase' }}>
+        <div style={{ position: 'absolute', left: 78, bottom: 44, width: 315, height: 155, borderLeft: `10px solid ${orange}`, background: 'rgba(255,130,0,0.055)' }} />
+        <div style={{ position: 'absolute', left: 112, bottom: 96, color: orange, fontSize: 28, fontWeight: 950, letterSpacing: '0.18em', textTransform: 'uppercase' }}>
           Remote Healthcare
         </div>
-        <div style={{ position: 'absolute', left: 88, bottom: 30, color: black, fontSize: 17, fontWeight: 800, letterSpacing: '0.16em', textTransform: 'uppercase' }}>
+        <div style={{ position: 'absolute', left: 112, bottom: 58, color: black, fontSize: 24, fontWeight: 900, letterSpacing: '0.12em', textTransform: 'uppercase' }}>
           Knoxville, TN
         </div>
 
-        <div style={{ position: 'absolute', left: 438, top: 84, width: 760 }}>
-          <h1
-            style={{
-              margin: 0,
-              fontFamily: 'Georgia, Times New Roman, serif',
-              fontSize: 78,
-              letterSpacing: '0.02em',
-              lineHeight: 0.92,
-              color: black,
-            }}
-          >
+        <div style={{ position: 'absolute', left: '33vw', top: '24vh', width: '48vw', zIndex: 2 }}>
+          <h1 style={{ margin: 0, fontFamily: 'Georgia, Times New Roman, serif', fontSize: 'clamp(70px, 7vw, 122px)', letterSpacing: '0.025em', lineHeight: 0.88, color: black }}>
             KORI PICKLE
           </h1>
-          <div style={{ marginTop: 18, width: 290, height: 5, background: orange }} />
-          <h2 style={{ margin: '20px 0 0', fontSize: 34, lineHeight: 1.05, color: black, fontWeight: 900 }}>
+          <div style={{ marginTop: 24, width: 360, height: 8, background: orange }} />
+          <h2 style={{ margin: '26px 0 0', fontSize: 'clamp(38px, 3.4vw, 58px)', lineHeight: 1.0, color: black, fontWeight: 950 }}>
             RCM Workflow Analyst
           </h2>
-          <p style={{ margin: '16px 0 0', fontSize: 24, lineHeight: 1.25, color: black, fontWeight: 700 }}>
+          <p style={{ margin: '20px 0 0', fontSize: 'clamp(24px, 2vw, 34px)', lineHeight: 1.18, color: black, fontWeight: 800 }}>
             Denial Prevention <span style={{ color: orange }}>•</span> Claims Analysis <span style={{ color: orange }}>•</span> Health Informatics
-          </p>
-          <p style={{ margin: '18px 0 0', fontSize: 18, letterSpacing: '0.08em', textTransform: 'uppercase', color: '#222', fontWeight: 800 }}>
-            Portfolio: kori-rcm-portfolio-3jaz.vercel.app
           </p>
         </div>
 
-        <svg width="330" height="230" viewBox="0 0 330 230" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ position: 'absolute', right: 74, top: 92 }}>
-          <path d="M20 118 C62 52, 116 180, 168 106 S258 48, 312 118" stroke={orange} strokeWidth="5" strokeLinecap="round" fill="none" />
-          <path d="M22 168 H78 L104 84 L140 198 L180 124 H224 L252 66 L282 168 H312" stroke={black} strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" fill="none" opacity="0.92" />
-          {[22,78,104,140,180,224,252,282,312].map((x, i) => (
-            <circle key={i} cx={x} cy={[168,168,84,198,124,124,66,168,168][i]} r="7" fill={orange} stroke={white} strokeWidth="4" />
+        <svg width="26vw" height="56vh" viewBox="0 0 420 260" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ position: 'absolute', right: '4vw', top: '22vh', zIndex: 1 }}>
+          <path d="M25 128 C82 42, 142 205, 205 113 S323 35, 395 126" stroke={orange} strokeWidth="7" strokeLinecap="round" fill="none" />
+          <path d="M26 190 H98 L130 78 L174 222 L222 138 H282 L314 62 L352 190 H398" stroke={black} strokeWidth="6" strokeLinecap="round" strokeLinejoin="round" fill="none" opacity="0.92" />
+          {[26,98,130,174,222,282,314,352,398].map((x, i) => (
+            <circle key={i} cx={x} cy={[190,190,78,222,138,138,62,190,190][i]} r="10" fill={orange} stroke={white} strokeWidth="5" />
           ))}
         </svg>
+
+        <div style={{ position: 'absolute', right: 88, bottom: 48, fontSize: 22, fontWeight: 900, color: black, letterSpacing: '0.08em', textTransform: 'uppercase' }}>
+          Portfolio: kori-rcm-portfolio-3jaz.vercel.app
+        </div>
       </section>
     </main>
   );
